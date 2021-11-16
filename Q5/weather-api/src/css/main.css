@@ -1,0 +1,182 @@
+:root {
+  --primaryText: rgb(15, 15, 15);
+  --secondaryText: blue;
+
+  /* --primaryBackground: #202F53;
+    --secondaryBackground: #42A5F5; */
+}
+
+* {
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  text-align: center;
+  background-image: url("../imgs/home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100vh;
+}
+
+h1,
+h3,
+h4 {
+  color: var(--primaryText);
+}
+
+input {
+  background-color: rgba(245, 245, 245, 0.89);
+  width: 80%;
+  height: 30px;
+  border: 3px solid grey;
+  border-radius: 10px;
+  transition-duration: 500ms;
+
+  padding: 5px;
+  padding-left: 10px;
+  font-size: larger;
+  color: rgb(56, 56, 56);
+}
+
+input:focus {
+  transition-duration: 100ms;
+  border-color: var(--secondaryBackground);
+}
+
+button {
+  color: rgb(51, 9, 99);
+  border: solid;
+  padding: 1px 20px;
+  border-radius: 20px;
+  /* background-color: var(--secondaryBackground); */
+  opacity: 1;
+  font-size: 20px;
+  transition-duration: 100ms;
+}
+
+button:hover {
+  border-radius: 30px;
+  transition-duration: 100ms;
+  background-color: red;
+  cursor: pointer;
+}
+
+button:active {
+  color: var(--primaryBackground);
+}
+
+#output {
+  display: block;
+  background-color: var(--primaryBackground);
+
+  height: 40%;
+  margin-top: 50px;
+  padding: 20px;
+  opacity: 0.9;
+  border-radius: 20px;
+}
+
+#output h3 {
+  font-size: 25px;
+}
+
+#output h4 {
+  font-size: 20px;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--primaryBackground);
+  color: rgb(255, 255, 255);
+
+  opacity: 0.95;
+}
+
+#footer p {
+  margin: 10px;
+  line-height: 20px;
+}
+
+#test {
+  width: 100vw;
+}
+
+/* Desktop */
+@media only screen and (min-width: 769px) {
+  main {
+    height: 91vh;
+  }
+
+  /* h1 {
+  } */
+
+  #output {
+    width: 30%;
+  }
+
+  #footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0px;
+
+    height: 60px;
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 769px) {
+  body {
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  #searchForm {
+    margin-top: -20px;
+  }
+
+  #fillInPrompt {
+    padding: 20px;
+  }
+
+  main {
+    height: 100%;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  #output {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  button {
+    margin-top: -5px;
+  }
+
+  #footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0px;
+
+    height: 60px;
+    width: 100%;
+  }
+}

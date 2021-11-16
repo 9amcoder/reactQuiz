@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h5>Enter a number:</h5><input type="text" id="number" name="number" value=""></input>
+        <br /><br /><button onclick="fooBar()">
+            Get devisibility
+        </button>
+        <p id="result"></p>
+    </div>
+</body>
+
+<!--
+Write a function in Javascript, which receives NUMBER and has the next logic:
+a- it prints "foo" if NUMBER is divisible by 2;
+b- it prints "bar" if NUMBER is divisible by 7;
+c- it prints "foobar" if NUMBER is divisible by 14;
+d- it prints NUMBER value for other cases;
+note: NUMBER is a positive integer number;
+
+note: NUMBER is a positive integer number;  
+-->
+<script src="q2.js">
+    function fooBar() {
+        var number = document.getElementById("number").value;
+        if (number % 2 === 0) {
+            document.getElementById("result").innerHTML = "foo";
+
+            console.log("foo");
+        } else if (number % 7 === 0) {
+            document.getElementById("result").innerHTML = "bar";
+            console.log("bar");
+        } else if (number % 14 === 0) {
+            document.getElementById("result").innerHTML = "foobar";
+            console.log("foobar");
+        } else {
+            document.getElementById("result").innerHTML = number;
+            console.log(number);
+        }
+    }
+</script>
+
+</html>
